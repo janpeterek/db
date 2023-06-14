@@ -1,1 +1,14 @@
-{%}
+{% extends "base.html" %}
+{% block content %}
+    <div style='background-image: url("https://clutchpoints.com/_next/image?url=https%3A%2F%2Fwp.clutchpoints.com%2Fwp-content%2Fuploads%2F2023%2F02%2FThumbnail0.5x-2.png&w=1920&q=75");
+  background-repeat: no-repeat;
+    background-size: 100%;
+        height: 100vh'>
+        <h1 class="text-center fs-1 text-white pt-4">Basketbalisté</h1>
+        {% for popular_player in popular_players %}
+            <div class="text-center text-white fs-3">
+                <a href="{% url 'hrac' popular_player.pk %}"style="color:white!important">{{ popular_player.name }}</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

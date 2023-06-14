@@ -1,10 +1,16 @@
+{% load static %}
+{% load bootstrap5 %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %} Basketbalisté {% endblock %}</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
 </head>
 <body>
-tomas je tlusty
+
+<main>{% block content %} {% endblock %}</main>
+
 </body>
 </html>
